@@ -3,13 +3,13 @@
 require_once __DIR__ . '/includes/functions.php';
 require_once __DIR__ . '/config/database.php';
 
-// Manejo de eliminación de productos
+
 if (isset($_GET['accion']) && $_GET['accion'] === 'eliminar' && isset($_GET['id'])) {
     $count = eliminarProducto($_GET['id']);
     $mensaje = $count > 0 ? "Producto eliminado con éxito." : "No se pudo eliminar el producto.";
 }
 
-// Obtener productos para mostrar
+
 $productos = obtenerProductos();
 ?>
 
